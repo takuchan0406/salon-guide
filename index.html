@@ -259,6 +259,7 @@ nav{
     <button class="filter-chip" data-filter="四日市" onclick="setFilter(this,'四日市')">四日市</button>
     <button class="filter-chip" data-filter="桑名" onclick="setFilter(this,'桑名')">桑名</button>
     <button class="filter-chip" data-filter="鈴鹿" onclick="setFilter(this,'鈴鹿')">鈴鹿</button>
+    <button class="filter-chip" data-filter="菰野" onclick="setFilter(this,'菰野')">菰野</button>
     <button class="filter-chip" data-filter="県外" onclick="setFilter(this,'県外')">県外</button>
   </div>
 
@@ -442,7 +443,7 @@ function filterSalons() {
   const q = document.getElementById('search-input').value.toLowerCase();
   const visible = salons.filter(s => {
     if (!s.nameEn) return false;
-    const matchFilter = currentFilter === 'all' || s.plan === currentFilter || (currentFilter === '県外' && s.addr && !s.addr.includes('三重県')) || (s.addr && s.addr.includes(currentFilter + '市'));
+    const matchFilter = currentFilter === 'all' || s.plan === currentFilter || (currentFilter === '県外' && s.addr && !s.addr.includes('三重県')) || (s.addr && (s.addr.includes(currentFilter + '市') || s.addr.includes(currentFilter + '町')));
     const matchQ = !q ||
       s.nameEn.toLowerCase().includes(q) ||
       s.nameJa.includes(q) ||
