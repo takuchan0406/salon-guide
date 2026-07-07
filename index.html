@@ -224,10 +224,10 @@ nav{
 /* スポンサーバナー */
 .sponsor-wrap{max-width:900px;margin:0 auto;padding:0.6rem 1.5rem;}
 .sponsor-label{font-size:0.62rem;color:var(--muted);letter-spacing:0.08em;margin-bottom:0.4rem;text-transform:uppercase;}
-.sponsor-list{display:flex;gap:10px;flex-wrap:wrap;}
-.sponsor-banner{display:flex;align-items:center;gap:12px;border-radius:8px;overflow:hidden;border:1px solid var(--border);transition:opacity 0.2s;padding:8px 14px;background:#f0f0f0;text-decoration:none;}
+.sponsor-list{display:flex;gap:10px;flex-wrap:nowrap;}
+.sponsor-banner{display:flex;align-items:center;gap:10px;border-radius:8px;overflow:hidden;border:1px solid var(--border);transition:opacity 0.2s;padding:8px 12px;background:#f0f0f0;text-decoration:none;flex:1;}
 .sponsor-banner:hover{opacity:0.8;}
-.sponsor-banner img{width:80px;height:50px;object-fit:cover;border-radius:4px;flex-shrink:0;}
+.sponsor-banner img{height:44px;width:60px;object-fit:contain;border-radius:4px;flex-shrink:0;}
 .sponsor-banner-name{font-size:0.78rem;font-weight:600;color:var(--ink);}
 .sponsor-banner-sub{font-size:0.65rem;color:var(--muted);}
 
